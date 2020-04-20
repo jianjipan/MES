@@ -1,0 +1,29 @@
+﻿<Window x:Class="MMIS.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UserWindow" Height="150" Width="300" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#330033" Offset="0"/>
+            <GradientStop Color="#330033" Offset="0.93"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Button x:Name="CommonUser" Background="Transparent" HorizontalAlignment="Left" Margin="33,16,0,0" VerticalAlignment="Top" Width="75" Height="95" Click="CommonUser_Click">
+            <Button.Content>
+                <StackPanel Orientation="Vertical">
+                    <Image Stretch="Fill" Source="Image/common.jpg" Width="75" Height="75" />
+                    <TextBlock Text="普通用户" HorizontalAlignment="Center" Foreground="White" />
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <Button x:Name="VIPUser" Background="Transparent" HorizontalAlignment="Left" Margin="179,16,0,0" VerticalAlignment="Top" Width="75" Height="95" Click="VIPUser_Click">
+            <Button.Content>
+                <StackPanel Orientation="Vertical">
+                    <Image Stretch="Fill" Source="Image/timg.jpg" Width="75" Height="75" />
+                    <TextBlock Text="管理员用户" HorizontalAlignment="Center" Foreground="White" />
+                </StackPanel>
+            </Button.Content>
+        </Button>
+    </Grid>
+</Window>

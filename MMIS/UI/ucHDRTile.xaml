@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="MMIS.ucHDRTile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="155">
+    <Grid Width="155" Height="60">
+        <!--<dxlc:Tile Grid.Column="0" Size="ExtraSmall">
+            <Border Padding="10">
+                <Grid VerticalAlignment="Stretch">-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tbDiff" Text="+300 bbls" Grid.Column="1" Grid.Row="0" FontSize="10" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="tbProduction" Text="88888" Grid.Column="1" Grid.Row="1" FontSize="18" FontFamily="Tahoma" HorizontalAlignment="Right"/>
+        <TextBlock x:Name="tbTitle" Text="KOC" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" FontSize="28" FontFamily="Tahoma"/>
+        <!--<dxga:StateIndicatorControl HorizontalAlignment="Right"  Grid.Row="0" Width="20" Height="20" StateIndex="1" >
+            <dxga:StateIndicatorControl.Model>
+                <dxga:ArrowStateIndicatorModel/>
+            </dxga:StateIndicatorControl.Model>
+        </dxga:StateIndicatorControl>-->
+        <TextBlock Text="Daily Oil Production" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" FontSize="10" FontFamily="Tahoma" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+
+        <!--</Grid>
+            </Border>
+        </dxlc:Tile>-->
+    </Grid>
+</UserControl>

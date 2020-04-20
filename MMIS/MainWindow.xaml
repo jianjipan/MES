@@ -1,0 +1,475 @@
+﻿<Window xmlns:MMIS="clr-namespace:MMIS" x:Class="MMIS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="1200" MaxHeight="1200" Width="1600" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" Loaded="Window_Loaded">
+    <Window.Background>
+        <SolidColorBrush Color="Black"/>
+    </Window.Background>
+    <Grid x:Name="Root">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Margin="-10,-10,9.6,10.2" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Border.OpacityMask>
+                <RadialGradientBrush GradientOrigin="0.5,0.8">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Offset="1"/>
+                </RadialGradientBrush>
+            </Border.OpacityMask>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#FF000000" Offset="0.25" />
+                    <GradientStop Color="#FF333333" Offset="0.5" />
+                    <GradientStop Color="#FF555555" Offset="0.5" />
+                    <GradientStop Color="#FF000000" Offset="0.75" />
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Grid Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="300" Height="500" VerticalAlignment="Bottom" HorizontalAlignment="Left" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Path 
+            Stretch="Fill" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"
+              Data="m 5.6800848,299.62447 31.4433262,0.20286 71.203919,71.60964 0.20286,10.34587 -4.46292,4.66578 0.20286,16.8374 3.44862,3.65148 -0.20286,23.12606 16.63453,16.63453 1.0143,299.21875 -7.1001,7.50583 -43.006357,0 -13.591632,-13.99735 -35.500529,-0.20286 -20.2860172,-20.69174 0,-418.90625 z"
+              Stroke="White" Fill="#464646" Margin="0,-35,10,5" Opacity="0.50" />
+                <Path 
+            Stretch="Fill" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" 
+              Data="m 5.9192565,119.72381 16.9096095,0.28426 36.176508,37.80298 0.603288,93.39145 -9.255741,7.39869 0.326432,79.11788 12.375712,12.55995 -0.207797,89.66962 -17.99483,17.66083 -10.248863,0.16068 0.214723,73.68285 -22.98051,22.65169 0.124385,111.95774 75.885859,76.4557 96.795968,0.18974 8.0891,8.89351 0.0313,4.77138 -159.795977,0.5764 -27.0491645,-26.41274 0,-343.13202 9.1804035,-8.82541 0.03233,-172.67611 -9.2127355,-9.64819 0,-76.53088 z"
+              Stroke="White" Fill="#464646" Margin="0,0,-70,0" Opacity="0.50" />
+                <Path 
+            Stretch="Fill" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"
+              Data="m 67.562031,389.02969 0,51.78321 -18.791138,19.36491 22.090345,22.66413 0.430332,150.47254 -8.463185,8.60663 -0.143443,69.85713 12.766498,12.33617 14.057492,0.14345 35.574058,-34.85685 -0.28688,-111.59928 -14.48783,-14.34438 1e-5,-120.77968 -15.778824,-15.49193 0,-14.77471 -22.951009,-23.2379 -4.016426,-0.14344 z"
+              Stroke="White" Fill="#464646" Margin="55,40,0,35" Opacity="0.50" />
+            </Grid>
+
+            <Path Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3"
+            Stretch="Fill" Height="100"
+              Data="m 569.75878,753.37695 6.31153,-6.31153 270.24812,0.57377 45.90202,-46.47579 81.47608,0.57378 14.91815,-14.91816 266.80552,-1.14755 24.0985,-28.11498 78.0334,-0.57378 0.5738,74.59078 -24.6723,25.24611 -1135.21427,-0.28689 0.14345,-3.44265 371.376,0.28689 z"
+              Stroke="White" Fill="#464646"  Opacity="0.50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="427.6" />
+            <Path Grid.Column="1" Grid.ColumnSpan="3" 
+            Stretch="Fill" Height="150" 
+              Data="M 1358.5983,210.88392 1358.4128,40.461251 1324.6769,6.694384 25.154661,6.4915242 5.6800848,27.994702 5.2743644,52.337923 74.652542,53.149363 90.069915,34.080507 277.10699,36.92055 l 6.49153,-5.274365 23.12606,0 0.81144,-13.794491 196.64756,-1.217161 4.53899,-4.665784 597.98103,-0.202861 5.173,4.665784 59.0323,0.202861 11.7659,12.17161 16.6345,0 27.4876,27.893273 8.6215,-0.20286 13.7945,14.098782 0.5072,55.177962 7.6072,7.70869 68.1611,0.40572 14.6059,14.60593 0.6086,50.71505 12.1716,11.56302 5.7238,0.11221 z"
+              Stroke="White" Fill="#464646"  Opacity="0.50" HorizontalAlignment="Right" VerticalAlignment="Top" />
+
+
+
+            <Grid x:Name="UserInfo" Margin="0,35,0,0" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="180">
+                <Path Stroke="White" Margin="0" Fill="Black"
+                Data="m 178.05665,9.5337205 -9.4153,-9.18230986 -165.8752233,-0.28695 -2.21537004,3.73031996 0,13.7734604 3.04613004,2.29557 0.13847,47.48974 -3.18460004,2.1521 0.41539,9.46926 4.15380004,4.8781 46.3841093,0.28695 4.4308,-4.87811 102.737394,0.28695 19.17546,-26.010805 0.54681,-19.521611 -0.33787,-24.4826645 z">
+                    <Path.Effect>
+                        <DropShadowEffect ShadowDepth="15"
+                          Color="#007ACC"
+                          Opacity="1"
+                          BlurRadius="15"/>
+                    </Path.Effect>
+                </Path>
+                <StackPanel Width="150" Height="70" Orientation="Horizontal">
+
+                    <Grid>
+                        <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Visible">
+                            <Path Data="M50.5,4.7500001C25.232973,4.75 4.75,25.232973 4.7500001,50.5 4.75,75.767029 25.232973,96.25 50.5,96.25 75.767029,96.25 96.25,75.767029 96.25,50.5 96.25,25.232973 75.767029,4.75 50.5,4.7500001z M50.5,0C78.390381,0 101,22.609621 101,50.5 101,78.390381 78.390381,101 50.5,101 22.609621,101 0,78.390381 0,50.5 0,22.609621 22.609621,0 50.5,0z" Stretch="Fill" Fill="#FF007ACC" Name="Stroke" Visibility="Visible" />
+                        </Grid>
+                        <Path Data="F1M484.766,361.437C484.766,361.272 484.766,361.044 484.766,360.702 484.766,354.202 473.334,347.86 463.161,344.493 462.697,344.342 459.766,343.021 461.598,337.451L461.572,337.451C466.346,332.535 469.995,324.617 469.995,316.825 469.995,304.846 462.027,298.566 452.769,298.566 443.505,298.566 435.583,304.846 435.583,316.825 435.583,324.647 439.212,332.596 444.014,337.502 445.887,342.413 442.538,344.236 441.837,344.493 432.143,348 420.766,354.392 420.766,360.702 420.766,361.044 420.766,361.272 420.766,361.437L484.766,361.437z" Stretch="Uniform" Fill="#FF007ACC" Width="26" Height="26" Margin="0,0,0,0">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <TransformGroup.Children>
+                                        <RotateTransform Angle="0" />
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                    </TransformGroup.Children>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Grid>
+                    <StackPanel Margin="5,0,0,5" Width="100">
+                        <TextBlock x:Name="txtUser" Text="USER" FontSize="14" Foreground="#007ACC" />
+                        <Separator  Height="4" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#007ACC" />
+                        <TextBlock x:Name="txtDesignation" Text="DESIGNATION" FontSize="10" TextWrapping="WrapWithOverflow" Foreground="#007ACC" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="Logo" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Path Grid.Column="1"
+            Stretch="Fill" Height="100" Width="200" StrokeThickness="1"
+              Data="m 95.533572,15.215142 9.754178,-9.1804036 171.84567,-0.2868876 2.29511,3.7295388 0,13.7706054 -3.15577,2.2951 -0.14345,47.479899 3.29922,2.151657 -0.43034,9.467291 -4.30331,4.877089 -48.05368,0.286888 -4.59019,-4.87709 L 115.6157,85.215717 109.87795,78.90419 73.730115,36.157937 95.533572,15.215142 z"
+              Stroke="White" Margin="-30,0,0,0">
+                    <Path.Fill>
+                        <RadialGradientBrush RadiusY="0.573" RadiusX="0.667" GradientOrigin="1.01,1.035">
+                            <GradientStop Color="#FF06183C" Offset="0.81"/>
+                            <GradientStop Color="#FF0D60A3"/>
+                        </RadialGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="circle" Grid.Column="0"
+            Stretch="Fill" Height="100" Width="100" StrokeThickness="2"
+              Data="m 152.05043,67.572128 a 46.475792,43.46347 0 1 1 -92.951584,0 46.475792,43.46347 0 1 1 92.951584,0 z"
+              Stroke="White" Margin="0" Fill="#FF06183C" />
+                <StackPanel x:Name="Title1" Grid.Column="1" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <TextBlock Text="MES SYSTEM" Foreground="White" FontSize="20" />
+                    <TextBlock Text="POWERED BY: " Foreground="White" FontSize="10" />
+                    <TextBlock Text="Daniel" Foreground="White" FontSize="12" />
+
+                </StackPanel>
+
+                <Path Stretch="Uniform" Fill="#FFFFFFFF" Width="68" Height="68" Margin="0,0,0,0">
+                    <Path.Data>
+                        <PathGeometry FillRule="Nonzero" Figures="M49.59375,25.5239562988281L53.7436485290527,25.7319641113281 57.4746055603027,26.3559875488281 60.7866172790527,27.3960266113281 63.6796875,28.8520812988281 66.02783203125,30.6450500488281 67.705078125,32.6958312988281 68.71142578125,35.0044250488281 69.046875,37.5708312988281 68.824951171875,40.0478820800781 68.1591796875,42.4868507385254 67.049560546875,44.8877296447754 65.49609375,47.2505226135254 63.498779296875,49.5752296447754 61.0576171875,51.8618507385254 58.172607421875,54.1103820800781 54.84375,56.3208312988281 58.76806640625,57.5893859863281 62.244140625,59.1450500488281 65.27197265625,60.9878234863281 67.8515625,63.1177062988281 69.91259765625,65.4673156738281 71.384765625,67.9692687988281 72.26806640625,70.6235656738281 72.5625,73.4302062988281 72.369873046875,76.2134094238281 71.7919921875,78.8911437988281 70.828857421875,81.4634094238281 69.48046875,83.9302062988281 67.746826171875,86.2915344238281 65.6279296875,88.5473937988281 63.123779296875,90.6977844238281 60.234375,92.7427062988281 53.7451171875,96.2290344238281 46.60546875,98.7192687988281 38.8154296875,100.213409423828 30.375,100.711456298828 27.353759765625,100.584747314453 24.7353515625,100.204620361328 22.519775390625,99.5710754394531 20.70703125,98.6841125488281 19.297119140625,97.5437316894531 18.2900390625,96.1499328613281 17.685791015625,94.5027160644531 17.484375,92.6020812988281 17.572265625,91.3188781738281 17.8359375,89.3911437988281 18.275390625,86.8188781738281 18.890625,83.6020812988281 25.5,50.3677062988281 26.0976543426514,46.9575538635254 26.296875,44.6958312988281 26.0156230926514,43.1255226135254 25.171875,41.6958312988281 28.0341796875,40.6704444885254 30.43359375,39.9380226135254 32.3701171875,39.4985694885254 33.84375,39.3520812988281 35.115234375,39.5602760314941 36.0234375,40.1848487854004 36.568359375,41.2258033752441 36.75,42.6831359863281 36.6533203125,43.5158576965332 36.36328125,45.1695289611816 35.8798828125,47.6441535949707 35.203125,50.9397277832031 29.0625,81.7629699707031 28.6113262176514,84.2054138183594 28.2890605926514,86.1846008300781 28.0957012176514,87.7005310058594 28.03125,88.7532043457031 28.7343730926514,91.3394317626953 30.8437480926514,93.1867370605469 34.359375,94.2951202392578 39.28125,94.6645812988281 43.7329063415527,94.3315811157227 47.8535118103027,93.3325805664063 51.6430625915527,91.6675796508789 55.1015625,89.3365783691406 57.9829063415527,86.5390701293945 60.0410118103027,83.4745483398438 61.2758750915527,80.1430130004883 61.6875,76.5444641113281 61.4589805603027,73.792594909668 60.7734336853027,71.3575439453125 59.6308555603027,69.2393112182617 58.03125,67.4378967285156 55.8984336853027,65.8887557983398 53.1562461853027,64.52734375 49.8046836853027,63.3536605834961 45.84375,62.3677062988281 42.65625,63.2817687988281 39.1875,63.5864562988281 36.140625,63.1645812988281 36.86279296875,60.8618469238281 37.669921875,58.9692687988281 38.56201171875,57.4868469238281 39.5390625,56.4145812988281 42.205078125,55.1138000488281 46.125,54.6802062988281 47.49609375,54.7153625488281 49.265625,54.8208312988281 53.6337852478027,51.1733741760254 56.7539024353027,47.5434913635254 58.6259727478027,43.9311866760254 59.25,40.3364562988281 59.0478515625,38.3479309082031 58.4414024353027,36.6245422363281 57.4306602478027,35.1662902832031 56.0156211853027,33.9731750488281 54.1962852478027,33.0451965332031 51.9726524353027,32.3823547363281 49.3447265625,31.9846496582031 46.3125,31.8520812988281 41.1474609375,32.1648254394531 36.12890625,33.1030578613281 31.2568359375,34.6667785644531 26.53125,36.8559875488281 21.9521484375,39.6706848144531 17.51953125,43.1108703613281 13.2333974838257,47.1765441894531 9.09375,51.8677062988281 8.1796875,49.3598937988281 7.87500047683716,46.9927062988281 8.0789794921875,44.9983215332031 8.69091796875,43.0464210510254 9.7108154296875,41.1369972229004 11.138671875,39.2700538635254 12.9744873046875,37.4455909729004 15.21826171875,35.6636085510254 17.8699951171875,33.9241027832031 20.9296875,32.2270812988281 27.61669921875,29.2944641113281 34.623046875,27.1997375488281 41.94873046875,25.9429016113281 49.59375,25.5239562988281z" />
+                    </Path.Data>
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <TransformGroup.Children>
+                                <RotateTransform Angle="0" />
+                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                            </TransformGroup.Children>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Grid>
+
+            <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Right" Margin="0,10,18,0" VerticalAlignment="Top">
+                <Button x:Name="btnClose" Content="CLOSE" Width="85" Height="30" Style="{StaticResource ButtonStyle1}" Click="btnClose_Click"/>
+                <Button x:Name="btnMin" Content="MINIMIZE" Width="85" Height="30" Style="{StaticResource ButtonStyle1}" Margin="0,5,0,0" Click="btnMin_Click"/>
+            </StackPanel>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="4"  Grid.ColumnSpan="4" Margin="100,120,70,70" Height="945" Width="1365">
+                <TabControl Grid.Column="0" Grid.Row="0" SelectedIndex="0" TabStripPlacement="Left" IsSynchronizedWithCurrentItem="False" BorderThickness="1" Foreground="{x:Null}" Background="{x:Null}" Margin="10,4,-10,-5">
+                    <TabItem Style="{StaticResource TabItemStyle4}" x:Name="TableItem1" Header="订单管理"  Height="80" Width="200" Foreground="{x:Null}">
+                        <Grid Margin="10" Height="900">
+                            <Button x:Name="btn_AGV_Start_Close" Content="{Binding AGV_BUTTON,Mode=OneWay}" Width="85" Height="30"  Style="{StaticResource ButtonStyle1}" Margin="1026,10,26.6,860" Click="btn_AGV_Start_Close_Click" IsCancel="True"/>
+                            <GroupBox Header="作业计划" Margin="45,70,93.6,624" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid Margin="0,-43,0.4,5.8">
+                                    <Label Content="订单类型"  Style="{StaticResource tbAddFlag}" Height="54" Margin="29,56,0,68" Width="135"/>
+                                    <Label Content="订单数量"  Style="{StaticResource tbAddFlag}" Height="54" Margin="372,56,0,68" Width="135"/>
+                                    <ComboBox x:Name="cb_OrderStyle" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="54" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Margin="169,56,650,68">
+                                        <ComboBoxItem Content="轴承压装订单"/>
+                                        <ComboBoxItem Content="拧螺丝订单"/>
+                                        <ComboBoxItem Content="加工订单"/>
+                                        <ComboBoxItem Content="检测订单"/>
+                                    </ComboBox>
+                                    <ComboBox x:Name="cb_OrderNum" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="54" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Margin="507,58,313,66">
+                                        <ComboBoxItem Content="1"/>
+                                        <ComboBoxItem Content="2"/>
+                                        <ComboBoxItem Content="3"/>
+                                        <ComboBoxItem Content="4"/>
+                                        <ComboBoxItem Content="5"/>
+                                        <ComboBoxItem Content="6"/>
+                                    </ComboBox>
+                                    <Button Name="btn_Booking" Content="下单" Style="{StaticResource ButtonStyle1}" Width="121" Height="30" Margin="702,70,163,78" Click="btn_Booking_Click"/>
+                                    <Button x:Name="btn_Execute_order" Content="执行订单" Style="{StaticResource ButtonStyle1}" Width="118" Height="30" Margin="845,70,23,78" Click="btn_Execute_order_Click"/>
+                                    <Label x:Name="lb_P_State" Content="{Binding P_Order, Mode=OneWay}" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,136,0,8" Width="226"/>
+                                    <Label x:Name="lb_D_State" Content="{Binding D_Order, Mode=OneWay}" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="255,135,0,10" Width="228"/>
+                                    <Label x:Name="lb_A1_State" Content="{Binding A1_Order, Mode=OneWay}" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="507,136,0,10" Width="224"/>
+                                    <Label x:Name="lb_A2_State" Content="{Binding A2_Order, Mode=OneWay}" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="762,136,0,10" Width="214"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="生产派工" Margin="45,319,93.6,273" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <ComboBox x:Name="Hand_Up_TrayStyle" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="54" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Margin="178,20,629.4,169.2">
+                                        <ComboBoxItem Content="加工空托盘A0"/>
+                                        <ComboBoxItem Content="加工毛坯托盘A1"/>
+                                        <ComboBoxItem Content="加工成品托盘A2"/>
+                                        <ComboBoxItem Content="检测完成托盘A3"/>
+                                        <ComboBoxItem Content="轴承压装毛坯托盘B1"/>
+                                        <ComboBoxItem Content="轴承压装成品托盘B2"/>
+                                        <ComboBoxItem Content="轴承压装空托盘B0"/>
+                                        <ComboBoxItem Content="拧螺钉空托盘C0"/>
+                                        <ComboBoxItem Content="拧螺钉毛坯托盘C1"/>
+                                        <ComboBoxItem Content="拧螺钉完成托盘C2"/>
+                                        <ComboBoxItem Content="轴承托盘D"/>
+                                        <ComboBoxItem Content="螺钉托盘E"/>
+                                    </ComboBox>
+                                    <ComboBox x:Name="Hand_Down_TrayStyle" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="54" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Margin="178,129,629.4,60.2">
+                                        <ComboBoxItem Content="加工空托盘A0"/>
+                                        <ComboBoxItem Content="加工毛坯托盘A1"/>
+                                        <ComboBoxItem Content="加工成品托盘A2"/>
+                                        <ComboBoxItem Content="检测完成托盘A3"/>
+                                        <ComboBoxItem Content="轴承压装毛坯托盘B1"/>
+                                        <ComboBoxItem Content="轴承压装成品托盘B2"/>
+                                        <ComboBoxItem Content="轴承压装空托盘B0"/>
+                                        <ComboBoxItem Content="拧螺钉空托盘C0"/>
+                                        <ComboBoxItem Content="拧螺钉毛坯托盘C1"/>
+                                        <ComboBoxItem Content="拧螺钉完成托盘C2"/>
+                                        <ComboBoxItem Content="轴承托盘D"/>
+                                        <ComboBoxItem Content="螺钉托盘E"/>
+                                    </ComboBox>
+                                    <Button x:Name="btn_Hand_Up_Tray" Content="人工上料" Style="{StaticResource ButtonStyle1}" Width="85" Height="30" Margin="681,32,220.4,181.2" Click="btn_Hand_Up_Tray_Click"/>
+                                    <Button x:Name="btn_Hand_Down_Tray" Content="人工下料" Style="{StaticResource ButtonStyle1}" Width="85" Height="30" Margin="681,141,220.4,72.2" Click="btn_Hand_Down_Tray_Click"/>
+                                    <TextBox x:Name="Tray_parameter" Foreground="White" FontSize="36" TextAlignment="Center" Background="Transparent" Padding="5" Text="0" Height="54" Margin="516,20,381.4,169.2"/>
+                                    <Label Content="上料类型"  Style="{StaticResource tbAddFlag}" Height="54" Margin="26,20,0,169.2" Width="135"/>
+                                    <Label Content="下料类型"  Style="{StaticResource tbAddFlag}" Height="54" Margin="26,129,0,60.2" Width="135"/>
+                                    <Label Content="料盘参数"  Style="{StaticResource tbAddFlag}" Height="54" Margin="376,20,0,169.2" Width="135"/>
+                                </Grid>
+                            </GroupBox>
+
+                            <Button x:Name="btn_WH_Start_Close" Content="{Binding WH_BUTTON,Mode=OneWay}" Width="85" Height="30"  Style="{StaticResource ButtonStyle1}" Margin="912,10,140.6,860" Click="btn_WH_Start_Close_Click" IsCancel="True"/>
+                            <Button x:Name="btn_Reset" Content="重置" Width="95"  Style="{StaticResource ButtonStyle1}" Margin="772,10,270.6,860" Click="btn_Reset_Click"/>
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem Style="{StaticResource TabItemStyle4}" x:Name="TableItem2" Header="生产概况" Height="80" Width="200" Foreground="{x:Null}">
+                        <Grid Margin="10,0,9.6,0" Height="900">
+                            <GroupBox Header="AGV状态" Margin="21,20,832,585" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <Label Foreground="White" Content="通信状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="10,70,0,128" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_AGV_com_state" Foreground="White" Content="{Binding AGV_COM_STATE,Mode=OneWay}"  Style="{StaticResource ResourceKey=tbAddFlag}" Margin="139,70,0,127.6" Width="93" Height="Auto"/>
+                                    <Label Foreground="White" Content="位置状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="9,132,0,66" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_AGV_pos_state" Foreground="White" Content="{Binding AGV_POS_ACTION,Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="102,132,0,66" Width="165" Height="Auto"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="立库状态" Margin="344,20,516,585" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <Label Foreground="White" Content="通信状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="0,68,0,129.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_W_com_state" Foreground="White" Content="{Binding WH_COM_STATE,Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="146,68,0,129.6" Width="93" Height="Auto"/>
+                                    <Label Foreground="White" Content="操作状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="0,129,0,68.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_W_oper_state" Foreground="White" Content="{Binding WH_OPER_STATE,Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="82,129,0,68.6" Width="173" Height="Auto"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="装配区状态" Margin="658,20,86,585" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <Label Foreground="White" Content="通信状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,32,0,165.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_A_com_state" Foreground="White" Content="{Binding A_COM_STATE, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,32,0,165.6" Width="199" Height="Auto"/>
+                                    <Label Foreground="White" Content="系统状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,64,0,133.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_A_sys_state" Foreground="White" Content="{Binding A_SYS_STATE, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,64,0,133.6" Width="199" Height="Auto"/>
+                                    <Label Foreground="White" Content="拧螺丝区状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="29,96,0,101.6" Width="124" Height="Auto"/>
+                                    <Label x:Name="lb_A_Area1_state" Foreground="White" Content="{Binding A_AREA1, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,96,0,101.6" Width="199" Height="Auto" RenderTransformOrigin="0.206,0.537"/>
+                                    <Label Foreground="White" Content="压装区状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="30,128,0,69.6" Width="123" Height="Auto"/>
+                                    <Label x:Name="lb_A_Area2_state" Foreground="White" Content="{Binding A_AREA2, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,128,0,69.6" Width="199" Height="Auto"/>
+                                    <Label Foreground="White" Content="装配区机器人：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="29,160,0,37.6" Width="123" Height="Auto"/>
+                                    <Label x:Name="lb_A_Robot_state" Foreground="White" Content="{Binding A_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,160,0,37.6" Width="199" Height="Auto"/>
+                                    <Label Foreground="White" Content="直角坐标机器人：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="29,188,0,9.6" Width="130" Height="Auto"/>
+                                    <Label x:Name="lb_A_Cor_state" Foreground="White" Content="{Binding A_COR_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,188,0,9.6" Width="199" Height="Auto"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="检测区状态" Margin="658,332,86,273" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <Label Foreground="White" Content="通信状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,21,0,176.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_D_com_state" Foreground="White" Content="{Binding D_COM_STATE, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Width="178" Height="Auto" Margin="159,16,0,181.6"/>
+                                    <Label Foreground="White" Content="系统状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,53,0,144.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_D_sys_state" Foreground="White" Content="{Binding D_SYS_STATE, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,53,0,144.6" Width="178" Height="Auto"/>
+                                    <Label Foreground="White" Content="检测区1状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,85,0,112.6" Width="112" Height="Auto"/>
+                                    <Label x:Name="lb_D_Area1_state" Foreground="White" Content="{Binding D_AREA1, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,82,0,115.6" Width="178" Height="Auto"/>
+                                    <Label Foreground="White" Content="检测区2状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,114,0,83.6" Width="112" Height="Auto"/>
+                                    <Label x:Name="lb_D_Area2_state" Foreground="White" Content="{Binding D_AREA2, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,114,0,83.6" Width="178" Height="Auto"/>
+                                    <Label Foreground="White" Content="打标机状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,146,0,51.6" Width="112" Height="Auto"/>
+                                    <Label x:Name="lb_D_Marking_state" Foreground="White" Content="{Binding D_MARKING_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,146,0,51.6" Width="178" Height="Auto"/>
+                                    <Label Foreground="White" Content="检测区机器人：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="42,178,0,19.6" Width="112" Height="Auto"/>
+                                    <Label x:Name="lb_D_Robot_state" Foreground="White" Content="{Binding D_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="159,178,0,19.6" Width="178" Height="Auto"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="加工区状态" Margin="21,332,516,273" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <Label Foreground="White" Content="通信状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="19,12,0,185.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_P_com_state" Foreground="White" Content="{Binding P_COM_STATE, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="102,12,0,185.6" Width="93" Height="Auto"/>
+                                    <Label Foreground="White" Content="系统状态：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="19,49,0,148.6" Width="93" Height="Auto"/>
+                                    <Label x:Name="lb_P_sys_state" Foreground="White" Content="{Binding P_SYS_STATE, Mode=OneWay}"  Style="{StaticResource ResourceKey=tbAddFlag}" Margin="102,49,0,148.6" Width="147" Height="Auto"/>
+                                    <Label Foreground="White" Content="人工上料区：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="19,81,0,116.6" Width="98" Height="Auto"/>
+                                    <Label x:Name="lb_P_Manualup_Area" Foreground="White" Content="{Binding P_MANUALUP_AREA, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="117,81,0,116.6" Width="93" Height="Auto"/>
+                                    <Label Foreground="White" Content="人工下料区：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="19,113,0,84.6" Width="98" Height="Auto"/>
+                                    <Label x:Name="lb_P_Manualdown_Area" Foreground="White" Content="{Binding P_MANUALDOWN_AREA, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="117,113,0,84.6" Width="93" Height="Auto" RenderTransformOrigin="0.5,0.008"/>
+                                    <Label Foreground="White" Content="加工区一：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="19,145,0,52.6" Width="98" Height="Auto"/>
+                                    <Label x:Name="lb_P_Area1" Foreground="White" Content="{Binding P_AREA1, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="117,145,0,52.6" Width="93" Height="Auto"/>
+                                    <Label Foreground="White" Content="加工区二：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="19,177,0,20.6" Width="98" Height="Auto"/>
+                                    <Label x:Name="lb_P_Area2" Foreground="White" Content="{Binding P_AREA2, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="117,177,0,20.6" Width="93" Height="Auto"/>
+                                    <Label Foreground="White" Content="Mazak机床一：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="334,31,0,166.6" Width="119" Height="Auto"/>
+                                    <Label x:Name="lb_P_Mazak1_State" Foreground="White" Content="{Binding P_MAZAK1_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="467,31,0,166.6" Width="93" Height="Auto" RenderTransformOrigin="0.597,0.641"/>
+                                    <Label Foreground="White" Content="Mazak机床二：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="334,63,0,134.6" Width="119" Height="Auto"/>
+                                    <Label x:Name="lb_P_Mazak2_State" Foreground="White" Content="{Binding P_MAZAK2_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="467,63,0,134.6" Width="93" Height="Auto" RenderTransformOrigin="0.597,0.641"/>
+                                    <Label Foreground="White" Content="大机床：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="334,95,0,102.6" Width="119" Height="Auto"/>
+                                    <Label x:Name="lb_P_Big_State" Foreground="White" Content="{Binding P_BIG_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="467,95,0,102.6" Width="93" Height="Auto" RenderTransformOrigin="0.597,0.641"/>
+                                    <Label Foreground="White" Content="加工区机器人：" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="334,127,0,70.6" Width="124" Height="Auto"/>
+                                    <Label x:Name="lb_P_Robot_State" Foreground="White" Content="{Binding P_ROBOT, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="467,127,0,70.6" Width="93" Height="Auto" RenderTransformOrigin="0.597,0.641"/>
+                                    <Label x:Name="lb_Other_info" Foreground="White" Content="{Binding OTHER_INFO, Mode=OneWay}" Style="{StaticResource ResourceKey=tbAddFlag}" Margin="238,159,0,38.6" Width="322" Height="Auto" RenderTransformOrigin="0.597,0.641"/>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Style="{StaticResource TabItemStyle4}" x:Name="HistoryRecord" Header="历史记录" Height="80" Width="200" Foreground="{x:Null}">
+                        <Grid  Margin="10" Height="900">
+                            <DatePicker x:Name="StartDatePicker1" Height="24" Canvas.Left="64" Canvas.Top="11" Width="129" FontSize="10" Margin="92,57,916.6,819"/>
+                            <Label Content="起始日期：" Height="24.532" Canvas.Top="7" Width="64.936" Foreground="White" FontSize="10" Margin="22,56,1050.6,819"/>
+                            <Label Content="截止日期：" Height="24.532" Canvas.Top="51.545" Width="64.936" Foreground="White" FontSize="10" Margin="22,144,1050.6,731"/>
+                            <Label Content="查询类型：" Height="24.532" Canvas.Top="51.545" Foreground="White" FontSize="10" Margin="324,143,754.6,732"/>
+                            <Label Content="条件筛选：" Height="24" Canvas.Top="98" Width="59" Foreground="White" FontSize="10" Margin="324,54,754.6,822"/>
+                            <DatePicker x:Name="EndDatePicker2" Height="25" Canvas.Left="64" Canvas.Top="51" Width="129" FontSize="10" Margin="92,144,916.6,731"/>
+                            <Button x:Name="btn_Search" Content="查询" Width="65" Height="25"  Style="{StaticResource ButtonStyle1}" Canvas.Left="290" Canvas.Top="98" Margin="636,54,436.6,821" Click="btn_Search_Click"/>
+                            <Button x:Name="btn_export_data" Content="导出数据" Width="95" Height="25"  Style="{StaticResource ButtonStyle1}" Canvas.Left="290" Canvas.Top="98" Margin="636,141,406.6,734" Click="btn_export_data_Click"/>
+                            <ComboBox x:Name="cb_BookingStyle" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="25" Width="129" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Canvas.Left="64" Canvas.Top="98" Margin="394,51,614.6,824">
+                                <ComboBoxItem Content="全部订单"/>
+                                <ComboBoxItem Content="轴承压装订单"/>
+                                <ComboBoxItem Content="拧螺丝订单"/>
+                                <ComboBoxItem Content="加工订单"/>
+                                <ComboBoxItem Content="检测订单"/>
+                            </ComboBox>
+                            <ComboBox x:Name="cb_SearchStyle" SelectedIndex="1" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="25" Width="129" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Canvas.Left="64" Canvas.Top="98" Margin="394,143,614.6,732">
+                                <ComboBoxItem Content="订单数据"/>
+                                <ComboBoxItem Content="托盘数据"/>
+                            </ComboBox>
+                            <DataGrid x:Name="dg_Order" Style="{StaticResource DataGridStyle}" Background="Transparent" Height="300" AutoGenerateColumns="False" VerticalAlignment="Bottom" HorizontalAlignment="Left" Canvas.Top="152" Width="467" Margin="56,0,0,404">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="订单号" Width="70" Binding="{Binding OrderID}"/>
+                                    <DataGridTextColumn Header="下单时间" Width="100" Binding="{Binding OrderTime}"/>
+                                    <DataGridTextColumn Header="订单类型" Width="100" Binding="{Binding OrderStyle}"/>
+                                    <DataGridTextColumn Header="下单数量" Width="100" Binding="{Binding OrderNum}"/>
+                                    <DataGridTextColumn Header="完成数量" Width="100" Binding="{Binding OrderCompleteNum}"/>
+                                    <DataGridTextColumn Header="订单状态" Width="100" Binding="{Binding OrderState}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <DataGrid x:Name="dg_detection" Style="{StaticResource DataGridStyle}" Background="Transparent" Height="300" AutoGenerateColumns="False" VerticalAlignment="Bottom" HorizontalAlignment="Left" Canvas.Top="152" Width="477" Margin="594,0,0,404">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="检测时间" Width="100" Binding="{Binding DetectionTime}"/>
+                                    <DataGridTextColumn Header="订单种类" Width="100" Binding="{Binding WorkArea}"/>
+                                    <DataGridTextColumn Header="工作台1托盘" Width="100" Binding="{Binding TrayInArea1}"/>
+                                    <DataGridTextColumn Header="工作台2托盘" Width="100" Binding="{Binding TrayInArea2}"/>
+                                    <DataGridTextColumn Header="第一参数" Width="100" Binding="{Binding para1}"/>
+                                    <DataGridTextColumn Header="第二参数" Width="100" Binding="{Binding para2}"/>
+                                    <DataGridTextColumn Header="第三参数" Width="100" Binding="{Binding para3}"/>
+                                    <DataGridTextColumn Header="第四参数" Width="100" Binding="{Binding para4}"/>
+                                    <DataGridTextColumn Header="第五参数" Width="100" Binding="{Binding para5}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Style="{StaticResource TabItemStyle4}" x:Name="KuweiShow" Header="立库管理" Height="80" Width="200" Foreground="{x:Null}">
+                        <Grid  Margin="10,0,9.6,0" Height="900">
+                            <Label Content="加工空托盘A0:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="111,47,0,799" Width="135"/>
+                            <Label x:Name="lb_Tary_A0" Content="{Binding Tray_A0, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="300,47,0,799" Width="69"/>
+                            <Label Content="加工毛坯托盘A1:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="111,101,0,745" Width="135"/>
+                            <Label x:Name="lb_Tary_A1" Content="{Binding Tray_A1, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="300,101,0,745" Width="69"/>
+                            <Label Content="加工成品托盘A2:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="113,146,0,700" Width="135"/>
+                            <Label x:Name="lb_Tary_A2" Content="{Binding Tray_A2, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="300,146,0,700" Width="69"/>
+                            <Label Content="检测完成托盘A3:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="113,200,0,646" Width="135"/>
+                            <Label x:Name="lb_Tary_A3" Content="{Binding Tray_A3, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="300,195,0,651" Width="69"/>
+                            <Label Content="轴承压装毛坯托盘B1:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="113,254,0,592" Width="168"/>
+                            <Label x:Name="lb_Tary_A4" Content="{Binding Tray_A4, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="300,254,0,592" Width="69"/>
+                            <Label Content="轴承压装成品托盘B2:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="407,47,0,799" Width="166"/>
+                            <Label x:Name="lb_Tary_A5" Content="{Binding Tray_A5, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="603,47,0,799" Width="69"/>
+                            <Label Content="轴承压装空托盘B0:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="407,101,0,745" Width="153"/>
+                            <Label x:Name="lb_Tary_A6" Content="{Binding Tray_A6, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="603,101,0,745" Width="69"/>
+                            <Label Content="拧螺钉空托盘C0:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="407,146,0,700" Width="135"/>
+                            <Label x:Name="lb_Tary_B0" Content="{Binding Tray_B0, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="603,146,0,700" Width="69"/>
+                            <Label Content="拧螺钉毛坯托盘C1:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="407,200,0,646" Width="153"/>
+                            <Label x:Name="lb_Tary_B1" Content="{Binding Tray_B1, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="603,195,0,651" Width="69"/>
+                            <Label Content="拧螺钉完成托盘C2:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="407,254,0,592" Width="135"/>
+                            <Label x:Name="lb_Tary_B2" Content="{Binding Tray_B2, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="603,254,0,592" Width="69"/>
+                            <Label Content="轴承托盘D:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="726,47,0,799" Width="135"/>
+                            <Label x:Name="lb_Tary_C" Content="{Binding Tray_C, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="844,42,0,804" Width="69"/>
+                            <Label Content="螺钉托盘E:" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="726,101,0,745" Width="135"/>
+                            <Label x:Name="lb_Tary_D" Content="{Binding Tray_D, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="844,101,0,745" Width="69"/>
+                            <Label Content="库位无托盘：" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="726,146,0,700" Width="135"/>
+                            <Label x:Name="lb_Tary_Empty" Content="{Binding Tray_Empty, Mode=OneWay}" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="54" Margin="844,146,0,700" Width="69"/>
+                            <Button x:Name="btn_kuwei_mannger" Content="库位管理" Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Left" Margin="736,277,0,0" VerticalAlignment="Top" Width="75" Click="btn_Kuwei_mannger_Click" Height="31"/>
+                            <Button x:Name="btn_User_mannger" Content="用户权限" Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Left" Margin="736,218,0,0" VerticalAlignment="Top" Width="75" Click="btn_User_mannger_Click" Height="31"/>
+                            <Label x:Name="quanxianinfo" Content="{Binding QUANXIANMODE, Mode=OneWay}" Foreground="White" FontSize="24" HorizontalAlignment="Left" Height="38" Margin="910,270,0,0" VerticalAlignment="Top" Width="166"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Style="{StaticResource TabItemStyle4}" x:Name="HandOperate" Header="设备管理" Height="80" Width="200" Foreground="{x:Null}">
+                        <Grid  Margin="10" Height="900">
+                            <GroupBox Header="立库操作" Margin="23,12,848.6,580" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <Label Content="动作类型：" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,10,0,189.4" Width="94"/>
+                                    <ComboBox x:Name="Hand_Action_Style" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="25" Width="129" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Canvas.Left="64" Canvas.Top="98" Margin="104,20,19.8,197.4">
+                                        <ComboBoxItem Content="出库"/>
+                                        <ComboBoxItem Content="入库"/>
+                                        <ComboBoxItem Content="侧边出库"/>
+                                    </ComboBox>
+                                    <Label Content="库位号：" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,69,0,143.4" Width="94"/>
+                                    <TextBox x:Name="Hand_Position" Text="0" Margin="104,65,24.8,141.4" Background="Transparent" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                                    <Label Content="托盘类型：" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,114,0,91.2" Width="94"/>
+                                    <ComboBox x:Name="Hand_Tray_Style" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="25" Width="129" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Canvas.Left="64" Canvas.Top="98" Margin="104,120,19.8,98.2">
+                                        <ComboBoxItem Content="加工空托盘A0"/>
+                                        <ComboBoxItem Content="加工毛坯托盘A1"/>
+                                        <ComboBoxItem Content="加工成品托盘A2"/>
+                                        <ComboBoxItem Content="检测完成托盘A3"/>
+                                        <ComboBoxItem Content="轴承压装毛坯托盘B1"/>
+                                        <ComboBoxItem Content="轴承压装成品托盘B2"/>
+                                        <ComboBoxItem Content="轴承压装空托盘B0"/>
+                                        <ComboBoxItem Content="拧螺钉空托盘C0"/>
+                                        <ComboBoxItem Content="拧螺钉毛坯托盘C1"/>
+                                        <ComboBoxItem Content="拧螺钉完成托盘C2"/>
+                                        <ComboBoxItem Content="轴承托盘D"/>
+                                        <ComboBoxItem Content="螺钉托盘E"/>
+                                    </ComboBox>
+                                    <Button x:Name="btn_Hand_WH_OK" Content="OK" Width="95" Height="25"  Style="{StaticResource ButtonStyle1}" Canvas.Left="290" Canvas.Top="98" Margin="71,209,86.8,9.2" Click="btn_Hand_WH_OK_Click"/>
+                                    <Label x:Name="lb_Hand_WH_Execute_State" Content="{Binding Path=Content,ElementName=lb_W_oper_state}" HorizontalContentAlignment="Center" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,163,-0.2,42.2" Width="243"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="AGV操作" Margin="23,343,848.6,278" Style="{StaticResource GroupBoxStyle1}">
+                                <Grid>
+                                    <Label Content="起点地图点：" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,18,0,158.4" Width="119" RenderTransformOrigin="0.551,0.347"/>
+                                    <ComboBox x:Name="Hand_Map_Start" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="25" Width="129" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Canvas.Left="64" Canvas.Top="98" Margin="114,26,9.8,163.4">
+                                        <ComboBoxItem Content="0"/>
+                                        <ComboBoxItem Content="6"/>
+                                        <ComboBoxItem Content="11"/>
+                                        <ComboBoxItem Content="13"/>
+                                        <ComboBoxItem Content="18"/>
+                                        <ComboBoxItem Content="20"/>
+                                        <ComboBoxItem Content="23"/>
+                                        <ComboBoxItem Content="25"/>
+                                        <ComboBoxItem Content="34"/>
+                                        <ComboBoxItem Content="29"/>
+                                        <ComboBoxItem Content="32"/>
+                                        <ComboBoxItem Content="36"/>
+                                    </ComboBox>
+                                    <Label Content="终止地图点：" HorizontalContentAlignment="Left" Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,75,0,106.4" Width="119"/>
+                                    <ComboBox x:Name="Hand_Map_End" SelectedIndex="2" FontFamily="FZLTZHUNHK" FontSize="18" Foreground="White" Height="25" Width="129" BorderBrush="#FF565656" Padding="65,0,0,0" IsEditable="False" Style="{DynamicResource ComboBoxStyle}" Canvas.Left="64" Canvas.Top="98" Margin="114,80,9.8,109.4">
+                                        <ComboBoxItem Content="0"/>
+                                        <ComboBoxItem Content="6"/>
+                                        <ComboBoxItem Content="11"/>
+                                        <ComboBoxItem Content="13"/>
+                                        <ComboBoxItem Content="18"/>
+                                        <ComboBoxItem Content="20"/>
+                                        <ComboBoxItem Content="23"/>
+                                        <ComboBoxItem Content="25"/>
+                                        <ComboBoxItem Content="34"/>
+                                        <ComboBoxItem Content="29"/>
+                                        <ComboBoxItem Content="32"/>
+                                        <ComboBoxItem Content="36"/>
+                                    </ComboBox>
+                                    <Button x:Name="btn_Hand_AGV_OK" Content="OK" Width="95" Height="25"  Style="{StaticResource ButtonStyle1}" Canvas.Left="290" Canvas.Top="98" Margin="68,179,89.8,10.4" Click="btn_Hand_AGV_OK_Click"/>
+                                    <Label x:Name="lb_Hand_AGV_Execute_State" HorizontalContentAlignment="Center" Content="{Binding Path=Content, ElementName=lb_AGV_pos_state}"  Style="{StaticResource tbAddFlag}" Height="Auto" Margin="10,127,-0.2,49.4" Width="243"/>
+                                </Grid>
+                            </GroupBox>
+                            <Image Source="Image/map4.png" Margin="317,17,45,437"/>
+                            <Button x:Name="btn_WH_ES" Content="立库急停"  Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Left" Margin="400,486,0,0" VerticalAlignment="Top" Width="75" Height="21" Click="btn_WH_ES_Click"/>
+                            <Button x:Name="btn_AGV_ES" Content="AGV急停"  Style="{StaticResource ButtonStyle1}"  HorizontalAlignment="Left" Margin="543,486,0,0" VerticalAlignment="Top" Width="75" Height="21" Click="btn_AGV_ES_Click"/>
+                            <Button x:Name="btn_AGV_NES" Content="AGV解急停"  Style="{StaticResource ButtonStyle1}" HorizontalAlignment="Left" Margin="680,486,0,0" VerticalAlignment="Top" Width="75" Height="21" Click="btn_AGV_NES_Click"/>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+
+            <MMIS:ucDigitalClock VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,5" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"/>
+            <Label x:Name="lb_show_state" Content="离线模式" Width="400" Height="30" Style="{StaticResource LabelStyle1}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+        </Grid>
+        <Label Content="大连电子学校MES系统" Foreground="White" FontSize="56" HorizontalAlignment="Left" Height="84" Margin="531,36,0,0" VerticalAlignment="Top" Width="580" Grid.ColumnSpan="3"/>
+    </Grid>
+</Window>

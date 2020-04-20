@@ -1,0 +1,640 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+                    
+    <Style TargetType="{x:Type Window}" x:Key="WindowStyle">
+        <Setter Property="FontFamily" Value="Agency FB" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style x:Key="LabelStyle1" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="Microsoft YaHei" />
+        <Setter Property="Height" Value="28" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="Blue"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="#464646"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Path Opacity="0.5" Name="Border" Stroke="White" Cursor="Hand" StrokeThickness="1" Stretch="Fill" Fill="{TemplateBinding Background}" 
+                            Data="m 952.3234,333.23005 5.59431,5.30742 0.14345,19.93868 -65.41038,0.43034 -8.60663,-8.31974 0,-17.64359 68.27925,0.28689 z" />
+                        <ContentPresenter Name="Text" Cursor="Hand" TextBlock.Foreground="White" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Margin="10,0"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Fill" Value="#F7941F" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Fill" Value="#B74425" />
+                            <!--<Setter TargetName="Border" Property="Stroke" Value="DarkKhaki" />-->
+                        </Trigger>
+                        <!--<Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="FocusCue" Property="Visibility" Value="Visible"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Content" Property="TextBlock.Foreground" Value="Gray"></Setter>
+                                <Setter TargetName="Border" Property="Fill" Value="MistyRose"></Setter>
+                            </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="#464646"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Path Opacity="0.5" Name="Border" Grid.Column="0" Grid.ColumnSpan="3" Stroke="White" Cursor="Hand" StrokeThickness="1" Stretch="Fill" Fill="{TemplateBinding Background}" 
+                            Data="m 141.43559,118.78157 -1e-5,26.10677 10.90174,11.18861 62.5415,-0.28688 9.1804,9.75418 48.484,0 0,-10.04107 -28.40187,-28.11499 -21.80346,-0.28688 -7.74596,-8.03286 -73.15634,-0.28688 z" />
+                        <Path Opacity="1" Name="Inside" Grid.Column="2" VerticalAlignment="Bottom" Height="15"  Stroke="White" Cursor="Hand" StrokeThickness="0" Stretch="Fill" Fill="#F7941F" 
+                            Data="m 229.07975,164.54013 5.30742,-5.88118 37.51056,-0.14346 -1e-5,6.16809 -42.81797,-0.14345 z" />
+
+                        <ContentPresenter Name="Text" Cursor="Hand" TextBlock.Foreground="White" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Margin="10,0"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Fill" Value="#F7941F" />
+                            <Setter TargetName="Inside" Property="Fill" Value="#B74425" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Fill" Value="#B74425" />
+                            <Setter TargetName="Inside" Property="Fill" Value="Red" />
+                            <!--<Setter TargetName="Border" Property="Stroke" Value="DarkKhaki" />-->
+                        </Trigger>
+                        <!--<Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="FocusCue" Property="Visibility" Value="Visible"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Content" Property="TextBlock.Foreground" Value="Gray"></Setter>
+                                <Setter TargetName="Border" Property="Fill" Value="MistyRose"></Setter>
+                            </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="#7F000000"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="Timeline1">
+                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="Timeline2">
+                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Path Opacity="0.5" Name="Border" Grid.Column="0" Grid.ColumnSpan="3" Stroke="White" Cursor="Hand" StrokeThickness="1" Stretch="Fill" Fill="{TemplateBinding Background}" 
+                            Data="m 141.43559,118.78157 -1e-5,26.10677 10.90174,11.18861 62.5415,-0.28688 9.1804,9.75418 48.484,0 0,-10.04107 -28.40187,-28.11499 -21.80346,-0.28688 -7.74596,-8.03286 -73.15634,-0.28688 z" />
+                        <Path Opacity="0.5" Name="glow" Grid.Column="0" Grid.ColumnSpan="3" Cursor="Hand" StrokeThickness="1,1,1,1" Stretch="Fill" 
+                            Data="m 141.43559,118.78157 -1e-5,26.10677 10.90174,11.18861 62.5415,-0.28688 9.1804,9.75418 48.484,0 0,-10.04107 -28.40187,-28.11499 -21.80346,-0.28688 -7.74596,-8.03286 -73.15634,-0.28688 z">
+                            <Path.Fill>
+                                <RadialGradientBrush>
+                                    <RadialGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1.702" ScaleY="2.243"/>
+                                            <SkewTransform AngleX="0" AngleY="0"/>
+                                            <RotateTransform Angle="0"/>
+                                            <TranslateTransform X="-0.368" Y="-0.152"/>
+                                        </TransformGroup>
+                                    </RadialGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#B28DBDFF" Offset="0"/>
+                                    <GradientStop Color="#008DBDFF" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                        <Path Opacity="0.5" Name="shine" Grid.Column="0" Grid.ColumnSpan="3" Cursor="Hand" StrokeThickness="1,1,1,1" Stretch="Fill" 
+                            Data="m 141.43559,118.78157 -1e-5,26.10677 10.90174,11.18861 62.5415,-0.28688 9.1804,9.75418 48.484,0 0,-10.04107 -28.40187,-28.11499 -21.80346,-0.28688 -7.74596,-8.03286 -73.15634,-0.28688 z">
+                            <Path.Fill>
+                                <LinearGradientBrush EndPoint="0.494,0.889" StartPoint="0.494,0.028">
+                                    <GradientStop Color="#99FFFFFF" Offset="0"/>
+                                    <GradientStop Color="#33FFFFFF" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                        <Path Opacity="1" Name="Inside" Grid.Column="2" VerticalAlignment="Bottom" Height="15"  Cursor="Hand" StrokeThickness="0" Stretch="Fill" Fill="#F7941F" 
+                            Data="m 229.07975,164.54013 5.30742,-5.88118 37.51056,-0.14346 -1e-5,6.16809 -42.81797,-0.14345 z" />
+
+                        <ContentPresenter Name="Text" Cursor="Hand" TextBlock.Foreground="White" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Margin="10,0"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" TargetName="shine" Value="0.4"/>
+                            <Setter Property="Fill" TargetName="Border" Value="#CC000000"/>
+                            <Setter Property="Visibility" TargetName="glow" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource Timeline1}"/>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="Timeline2_BeginStoryboard" Storyboard="{StaticResource Timeline2}"/>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="TabItemStyle4" TargetType="{x:Type TabItem}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="Timeline1">
+                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="Timeline2">
+                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Margin="0,0,0,0"  FontSize="24" VerticalAlignment="Center" d:LayoutOverrides="Height" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" Text="{TemplateBinding Header}" Foreground="White"/>
+                        <Path Opacity="0.5" Name="glow" Grid.Column="0" Grid.ColumnSpan="3" Cursor="Hand" StrokeThickness="1,1,1,1" Stretch="Fill" 
+                            Data="m 141.43559,118.78157 -1e-5,26.10677 10.90174,11.18861 62.5415,-0.28688 9.1804,9.75418 48.484,0 0,-10.04107 -28.40187,-28.11499 -21.80346,-0.28688 -7.74596,-8.03286 -73.15634,-0.28688 z">
+                            <Path.Fill>
+                                <RadialGradientBrush>
+                                    <RadialGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="1.702" ScaleY="2.243"/>
+                                            <SkewTransform AngleX="0" AngleY="0"/>
+                                            <RotateTransform Angle="0"/>
+                                            <TranslateTransform X="-0.368" Y="-0.152"/>
+                                        </TransformGroup>
+                                    </RadialGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#B28DBDFF" Offset="0"/>
+                                    <GradientStop Color="#008DBDFF" Offset="1"/>
+                                </RadialGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                        <Path Opacity="0.5" Name="shine" Grid.Column="0" Grid.ColumnSpan="3" Cursor="Hand" StrokeThickness="1,1,1,1" Stretch="Fill" 
+                            Data="m 141.43559,118.78157 -1e-5,26.10677 10.90174,11.18861 62.5415,-0.28688 9.1804,9.75418 48.484,0 0,-10.04107 -28.40187,-28.11499 -21.80346,-0.28688 -7.74596,-8.03286 -73.15634,-0.28688 z">
+                            <Path.Fill>
+                                <LinearGradientBrush EndPoint="0.494,0.089" StartPoint="0.494,0.028">
+                                    <GradientStop Color="#99FFFFFF" Offset="0"/>
+                                    <GradientStop Color="#33FFFFFF" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                        <Path Opacity="1" Name="Inside" Grid.Column="2" VerticalAlignment="Bottom" Height="15"  Cursor="Hand" StrokeThickness="0" Stretch="Fill" Fill="#007ACC" 
+                            Data="m 229.07975,164.54013 5.30742,-5.88118 37.51056,-0.14346 -1e-5,6.16809 -42.81797,-0.14345 z" />
+                        <Path Name="Border" Grid.Column="0" Grid.ColumnSpan="3" Stroke="#FFFFFFFF" Cursor="Hand" StrokeThickness="1" Stretch="Fill" 
+                            Data="m 141.43559,118.78157 -1e-5,26.10677 10.90174,11.18861 62.5415,-0.28688 9.1804,9.75418 48.484,0 0,-10.04107 -28.40187,-28.11499 -21.80346,-0.28688 -7.74596,-8.03286 -73.15634,-0.28688 z" />
+
+                        <ContentPresenter Name="Text" Grid.Column="0" Grid.ColumnSpan="3" Cursor="Hand" TextBlock.Foreground="White" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Margin="5,0,30,0"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!--<Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" TargetName="shine" Value="0.4"/>
+                            <Setter Property="Fill" TargetName="Border" Value="#CC000000"/>
+                            <Setter Property="Visibility" TargetName="glow" Value="Hidden"/>
+
+                        </Trigger>-->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Inside" Property="Fill" Value="#800000" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource Timeline1}"/>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard x:Name="Timeline2_BeginStoryboard" Storyboard="{StaticResource Timeline2}"/>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Combox右侧下拉按钮-->
+    <Style TargetType="{x:Type ToggleButton}" x:Key="ComboxStyleBtn">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <!--下拉按钮内部背景色-->
+                    <Border x:Name="Back" Background="#001f55" BorderThickness="1" BorderBrush="Transparent">
+                        <!--下拉按钮内边框-->
+                        <Path x:Name="PathFill" Fill="#03ffea"  Width="10" Height="6" StrokeThickness="0" Data="M5,0 L10,10 L0,10 z" RenderTransformOrigin="0.5,0.5" Stretch="Fill">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PathFill" Property="Fill" Value="White"/>
+                            <Setter TargetName="Back" Property="Background" Value="#00CA4F"/>
+                            <Setter TargetName="Back" Property="BorderBrush" Value="#59CA4F"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Combox-->
+    <Style TargetType="{x:Type ComboBox}" x:Key="ComboBoxStyle">
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <!--ComBoxItem-->
+                <Style TargetType="{x:Type ComboBoxItem}">
+                    <Setter Property="MinHeight" Value="22"/>
+                    <Setter Property="MinWidth" Value="60"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                                <Border x:Name="Back" Background="Transparent"  BorderThickness="0,0,0,0" BorderBrush="#81D779" >
+                                    <ContentPresenter ContentSource="{Binding Source}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="Back" Property="Background" Value="LightGray"/>
+                                    </Trigger>
+                                    <!--下拉框背景色-->
+                                    <Trigger Property="IsHighlighted" Value="True">
+                                        <Setter TargetName="Back" Property="Background" Value="#ff0000"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*"/>
+                            <ColumnDefinition Width="0.3*" MaxWidth="30"/>
+                        </Grid.ColumnDefinitions>
+                        <!--文字区域背景和边线样式-->
+                        <TextBox Background="#001f55" VerticalAlignment="Center"  Grid.Column="0" Foreground="#03ffea" BorderBrush="#03ffea" BorderThickness="0" IsReadOnly="{TemplateBinding IsReadOnly}" Text="{TemplateBinding Text}"/>
+                        <Border  Grid.Column="0" BorderThickness="1" BorderBrush="#03ffea" CornerRadius="1,0,0,1"/>
+                        <!--右侧下拉button设置-->
+                        <Border Grid.Column="1" BorderThickness="0,1,1,1" BorderBrush="#03ffea" CornerRadius="0,1,1,0">
+                            <ToggleButton BorderThickness="3" BorderBrush="#03ffea" Style="{StaticResource ComboxStyleBtn}" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" ClickMode="Press"/>
+                        </Border>
+                        <!--弹出popup整体设置-->
+                        <Popup IsOpen="{TemplateBinding IsDropDownOpen}" Placement="Bottom" x:Name="Popup" Focusable="False" AllowsTransparency="True" PopupAnimation="Slide" >
+                            <!--弹出popup边框-->
+                            <Border CornerRadius="1" BorderBrush="#03ffea" BorderThickness="1,0,1,1" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{TemplateBinding ActualWidth}" x:Name="DropDown" SnapsToDevicePixels="True">
+                                <Border.Effect>
+                                    <DropShadowEffect Color="Black" BlurRadius="2" ShadowDepth="0" Opacity="1"/>
+                                </Border.Effect>
+                                <!--下拉幕布边界背景设置 MaxHeight="{TemplateBinding MaxDropDownHeight}"-->
+                                <ScrollViewer Margin="0,0,0,0"   SnapsToDevicePixels="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" BorderBrush="#17acae" BorderThickness="2" >
+                                    <!-- StackPanel 用于显示子级，方法是将 IsItemsHost 设置为 True -->
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" Background="#001f55" />
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--label-->
+    <Style x:Key="tbAddFlag" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="Microsoft YaHei" />
+        <Setter Property="Height" Value="28" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    <!--GroupBox-->
+    <Style x:Key="GroupBoxStyle1" TargetType="{x:Type GroupBox}">
+        <Setter Property="BorderBrush" Value="#D5DFE5"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type GroupBox}">
+                    <Grid SnapsToDevicePixels="true">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="6"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto" MinHeight="59"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="6"/>
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="Transparent" BorderThickness="{TemplateBinding BorderThickness}" Grid.ColumnSpan="4" Grid.Column="0" CornerRadius="4" Grid.Row="0" Grid.RowSpan="4" Background="Transparent" Margin="0,-0.25,0,0.25">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#FFAAAAAA" Direction="350"/>
+                            </Border.Effect>
+                        </Border>
+                        <Border x:Name="Header" Grid.Column="1" Padding="3,1,3,0" Grid.Row="1" Grid.RowSpan="1" HorizontalAlignment="Right" Background="{x:Null}" Margin="0" Height="16.96" VerticalAlignment="Top"/>
+                        <ContentPresenter Grid.ColumnSpan="2" Grid.Column="1" Margin="{TemplateBinding Padding}" Grid.Row="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Grid.RowSpan="1"/>
+                        <Border BorderBrush="White" BorderThickness="{TemplateBinding BorderThickness}" Grid.ColumnSpan="4" CornerRadius="4" Grid.Row="1" Grid.RowSpan="3">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3">
+                                <Border BorderBrush="White" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2"/>
+                            </Border>
+                        </Border>
+                        <Grid x:Name="HeaderGrid" Height="47.2" VerticalAlignment="Stretch" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="0,7.982,-16,3.818" Grid.Row="1" HorizontalAlignment="Right">
+                            <Path Data="M12.19,0 L12.290733,14.847 -1.3000648E-08,14.847 z" Height="16.1" Margin="0,0,8.067,0" RenderTransformOrigin="0.499999978361064,0.499999995889058" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="12.29" >
+                                <Path.Fill>
+                                    <LinearGradientBrush EndPoint="0.466,2.201" StartPoint="0.5,0">
+                                        <GradientStop Color="#C66A6A6A" Offset="1"/>
+                                        <GradientStop Color="#E1434343" Offset="0.855"/>
+                                        <GradientStop Color="#FFC6C6C6" Offset="0.11"/>
+                                    </LinearGradientBrush>
+                                </Path.Fill>
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90.087"/>
+                                        <TranslateTransform Y="-6.04399277075815" X="6.0531771644038841"/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                            <Border BorderBrush="Black" BorderThickness="0" Margin="0,8.061,0,0" CornerRadius="16,0,0,16" Background="White">
+                                <Border.Effect>
+                                    <DropShadowEffect Direction="195" BlurRadius="10" Opacity="0.305" ShadowDepth="6"/>
+                                </Border.Effect>
+                                <Border x:Name="contentBorder" BorderBrush="Black" Margin="6,6,0,6" CornerRadius="16,0,0,16">
+                                    <Border.Background>
+                                        <LinearGradientBrush EndPoint="1.002,0.498" StartPoint="-0.024,0.502">
+                                            <GradientStop Color="#FF678B03" Offset="0.027"/>
+                                            <GradientStop Color="#FFA4C43D" Offset="0.948"/>
+                                            <GradientStop Color="#FFADCA54" Offset="0.969"/>
+                                            <GradientStop Color="#FFA7C646" Offset="0.975"/>
+                                            <GradientStop Color="#FFC9EF4C" Offset="0.994"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <Grid>
+                                        <ContentControl HorizontalAlignment="Left" Margin="20,0,23,0" d:LayoutOverrides="Height" VerticalAlignment="Center" Foreground="White">
+                                            <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0" Width="212.323"/>
+                                        </ContentControl>
+                                    </Grid>
+                                </Border>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--TabItem-->
+    <Style x:Key="SubTabItem" TargetType="{x:Type TabItem}">
+        <!--<Setter Property="FocusVisualStyle" Value="{x:null}"/>-->
+        <Setter Property="Foreground" Value="#333333"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="BorderBrush" Value="{StaticResource TabControlNormalBorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid SnapsToDevicePixels="true" Height="40" MinWidth="110">
+                        <Path Margin="0 0 0 -12" x:Name="PATH" Visibility="Collapsed" Data="M0.5,0.5 L109.5,0.5 109.5,39.5 64,40 57,51 49,40 0.5,39.5 z" Fill="#FF0FAF46"  Height="51.5"  Stretch="Fill" Stroke="Transparent"  Width="110"/>
+                        <Border x:Name="Bd" Background="#dfe9f6">
+                            <ContentPresenter Margin="5 0 5 0" x:Name="Content" ContentSource="Header" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true"/>
+                                <Condition Property="TabStripPlacement" Value="Top"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility" Value="visible" TargetName="PATH"/>
+                            <Setter Property="Foreground" Value="White"></Setter>
+                            <Setter Property="Background" Value="#FF0FAF46" TargetName="Bd"/>
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="Bd" Value="{StaticResource TabItemDisabledBackground}"/>
+                            <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource TabItemDisabledBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--DataGrid-->
+        <Style x:Key="DataGridStyle" TargetType="DataGrid">
+        <!--网格线颜色-->
+        <Setter Property="CanUserResizeColumns" Value="false"/>
+        <Setter Property="Background" Value="#E6DBBB" />
+        <Setter Property="BorderBrush" Value="#d6c79b" />
+        <Setter Property="HorizontalGridLinesBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#d6c79b"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalGridLinesBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#d6c79b"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--标题栏样式-->
+    <!--<Style  TargetType="DataGridColumnHeader" >
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Background" Value="White" />
+        <Setter  Property="FontWeight"  Value="Bold"/>
+    </Style>-->
+
+    <Style x:Key="DataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="MinHeight" Value="28" />
+        <Setter Property="Foreground" Value="#323433" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridColumnHeader">
+                    <Border x:Name="BackgroundBorder" BorderThickness="0,1,0,1"
+                             BorderBrush="#e6dbba"
+                              Width="Auto">
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter  Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <Path x:Name="SortArrow" Visibility="Collapsed" Data="M0,0 L1,0 0.5,1 z" Stretch="Fill"  Grid.Column="2" Width="8" Height="6" Fill="White" Margin="0,0,50,0"
+                            VerticalAlignment="Center" RenderTransformOrigin="1,1" />
+                            <Rectangle Width="1" Fill="#d6c79b" HorizontalAlignment="Right" Grid.ColumnSpan="1" />
+                            <!--<TextBlock  Background="Red">
+                            <ContentPresenter></ContentPresenter></TextBlock>-->
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Height" Value="25"/>
+    </Style>
+    <!--行样式触发-->
+    <!--背景色改变必须先设置cellStyle 因为cellStyle会覆盖rowStyle样式-->
+    <Style x:Key="DataGridRowStyle" TargetType="DataGridRow">
+        <Setter Property="Background" Value="#F2F2F2" />
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Foreground" Value="Black" />
+        <Style.Triggers>
+            <!--隔行换色-->
+            <Trigger Property="AlternationIndex" Value="0" >
+                <Setter Property="Background" Value="#e7e7e7" />
+            </Trigger>
+            <Trigger Property="AlternationIndex" Value="1" >
+                <Setter Property="Background" Value="#f2f2f2" />
+            </Trigger>
+
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightGray"/>
+                <!--<Setter Property="Foreground" Value="White"/>-->
+            </Trigger>
+
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--单元格样式触发-->
+    <Style x:Key="DataGridCellStyle" TargetType="DataGridCell">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <TextBlock TextAlignment="Center" VerticalAlignment="Center"  >
+                           <ContentPresenter />
+                    </TextBlock>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <!--<Setter Property="Background" Value="White"/>
+                <Setter Property="BorderThickness" Value="0"/>-->
+                <Setter Property="Foreground" Value="Black"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <ControlTemplate x:Key="GlassButton" TargetType="{x:Type Button}">
+        <ControlTemplate.Resources>
+            <Storyboard x:Key="Timeline1">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="Timeline2">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+        </ControlTemplate.Resources>
+        <Border BorderBrush="#FFFFFFFF" BorderThickness="1,1,1,1" CornerRadius="4,4,4,4">
+            <Border x:Name="border" Background="#7F000000" BorderBrush="#FF000000" BorderThickness="1,1,1,1" CornerRadius="4,4,4,4">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.507*"/>
+                        <RowDefinition Height="0.493*"/>
+                    </Grid.RowDefinitions>
+                    <Border Opacity="0" HorizontalAlignment="Stretch" x:Name="glow" Width="Auto" Grid.RowSpan="2" CornerRadius="4,4,4,4">
+                        <Border.Background>
+                            <RadialGradientBrush>
+                                <RadialGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="1.702" ScaleY="2.243"/>
+                                        <SkewTransform AngleX="0" AngleY="0"/>
+                                        <RotateTransform Angle="0"/>
+                                        <TranslateTransform X="-0.368" Y="-0.152"/>
+                                    </TransformGroup>
+                                </RadialGradientBrush.RelativeTransform>
+                                <GradientStop Color="#B28DBDFF" Offset="0"/>
+                                <GradientStop Color="#008DBDFF" Offset="1"/>
+                            </RadialGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Grid.RowSpan="2"/>
+                    <Border HorizontalAlignment="Stretch" Margin="0,0,0,0" x:Name="shine" Width="Auto" CornerRadius="4,4,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.494,0.889" StartPoint="0.494,0.028">
+                                <GradientStop Color="#99FFFFFF" Offset="0"/>
+                                <GradientStop Color="#33FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                </Grid>
+            </Border>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Opacity" TargetName="shine" Value="0.4"/>
+                <Setter Property="Background" TargetName="border" Value="#CC000000"/>
+                <Setter Property="Visibility" TargetName="glow" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard Storyboard="{StaticResource Timeline1}"/>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard x:Name="Timeline2_BeginStoryboard" Storyboard="{StaticResource Timeline2}"/>
+                </Trigger.ExitActions>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>

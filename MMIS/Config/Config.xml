@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--ProcessMachine代表加工PLC 
+    DetectionMachine代表检测PLC 
+	AssemblyMachine1代表轴承压装机器PLC 
+    AssemblyMachine2代表拧螺丝机器PLC-->
+<Config>
+  <SERVER>
+    <IP>192.168.0.6</IP>
+    <Port>2019</Port>
+  </SERVER>
+  <AGV>
+    <IP>192.168.0.7</IP>
+    <Port>3000</Port>
+  </AGV>
+  <WareHouse>
+    <IP>192.168.0.182</IP>
+	<Port>11000</Port>
+  </WareHouse>
+  <ProcessMachine>
+    <IP>192.168.0.1</IP>
+  </ProcessMachine>
+  <DetectionMachine>
+    <IP>192.168.0.21</IP>
+  </DetectionMachine>
+  <AssemblyMachine>
+    <IP>192.168.0.31</IP>
+  </AssemblyMachine>
+  <WHManngerSYS>
+    <Password>123456</Password>
+  </WHManngerSYS>
+  <TaskID>
+    <HandTaskID>20000</HandTaskID>
+  </TaskID>
+</Config>
